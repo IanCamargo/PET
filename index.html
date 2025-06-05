@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetGO - Cuidado e Movimento para seu Pet</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#" class="logo">PetGO</a>
+            <ul class="nav-links">
+                <li><a href="#como-funciona">Como Funciona</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#parceiros">Seja um Parceiro</a></li>
+                <li><a href="#login">Login</a></li>
+                <li><a href="#cadastro" class="btn-cadastro">Cadastre-se</a></li>
+            </ul>
+            <div class="menu-hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="main-content-wrapper">
+
+            <section class="hero">
+                <div class="hero-content">
+                    <h1>Transporte Confiável e Passeios Divertidos para seu Pet!</h1>
+                    <p>Conectamos você a motoristas cuidadosos e passeadores experientes para o bem-estar completo do seu melhor amigo.</p>
+                    <form id="form-agendamento-rapido">
+                        <input type="text" name="partida" placeholder="Local de Partida (Transporte)">
+                        <input type="text" name="destino" placeholder="Local de Destino (Transporte)">
+                        <button type="submit" class="btn-principal">Buscar Serviços</button>
+                    </form>
+                </div>
+            </section>
+
+            <section id="como-funciona" class="info-section">
+                <h2>Como o PetGO Funciona?</h2>
+                <div class="passos-container">
+                    <div class="passo">
+                        <i class="fas fa-mouse-pointer fa-3x passo-icon"></i>
+                        <h3>1. Escolha o Serviço</h3>
+                        <p>Selecione se precisa de transporte ou um passeio divertido para seu pet.</p>
+                    </div>
+                    <div class="passo">
+                        <i class="fas fa-calendar-alt fa-3x passo-icon"></i>
+                        <h3>2. Agende</h3>
+                        <p>Informe os detalhes, encontre motoristas ou passeadores disponíveis e confirme.</p>
+                    </div>
+                    <div class="passo">
+                        <i class="fas fa-paw fa-3x passo-icon"></i>
+                        <h3>3. Relaxe e Acompanhe</h3>
+                        <p>Seu pet recebe o cuidado necessário enquanto você pode acompanhar tudo pela plataforma.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="servicos" class="info-section bg-light">
+                <h2>Nossos Serviços PetGO</h2>
+                <p>Tudo para o cuidado e a felicidade do seu pet em um só lugar:</p>
+                <div class="servicos-container">
+                    <div class="servico-card">
+                        <i class="fas fa-car-side fa-3x servico-icon"></i>
+                        <h4>Transporte Pet Seguro</h4>
+                        <p>Levamos seu amigo para consultas, banho e tosa, ou qualquer destino com conforto e segurança.</p>
+                    </div>
+                    <div class="servico-card">
+                        <i class="fas fa-dog fa-3x servico-icon"></i>
+                        <h4>Passeios Personalizados</h4>
+                        <p>Passeadores experientes para garantir a diversão, exercício e socialização do seu pet.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="parceiros" class="info-section">
+                <h2>Seja um Herói PetGO!</h2>
+                <p>Ama animais e quer uma renda extra? Seja um motorista ou passeador parceiro PetGO e faça a diferença!</p>
+                <a href="#cadastro-parceiro" class="btn-secundario">Quero ser Parceiro</a>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentYear"></span> PetGO. Todos os direitos reservados.</p>
+        <div class="footer-links">
+            <a href="#termos">Termos de Serviço</a> |
+            <a href="#privacidade">Política de Privacidade</a> |
+            <a href="#contato">Contato</a>
+        </div>
+    </footer>
+
+    <script>
+        const menuHamburger = document.querySelector('.menu-hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuHamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            menuHamburger.classList.toggle('active');
+        });
+
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
